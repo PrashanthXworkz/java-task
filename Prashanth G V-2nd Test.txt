@@ -1,0 +1,182 @@
+1. JDK-java development kit
+           JDK contains the JRE+development tools inside kit.
+           This is used for development for the bytecode in java.
+            It is used for run time environment in the code in java.
+    JRE-Java Runtime Environment
+           JRE is combination of JVM and the bytecode.
+           JRE is used for the compile time for code in java.
+    JVM-Java Virtual Machine
+           It can be act as virtual in the system it is not physically visible.
+            JVM contains the main method in java. 
+            It can be converts the code into byte code using the compiler.
+          These three are platform dependent in the given code.
+
+2.Method is a block of code in java.It contains the statements in the inside the body and having Parameter in the given method.Parameter contains one or more value
+   in the given method.
+   There are two types in the method:
+   1.static method:
+        This method is declared in the class but not used in the the method in the given code.without using static keyword we cannot declare this type method in the code.
+		      eg: class Fruit{
+			    static String Fruitname="jackFruit";
+		        static int price=70;
+				public static void main(String args[]){
+				System.out.println("Fruitname");
+				System.out.println(price);
+				}
+		}
+	2.non-static method:
+	 without declaring  as static keyword in java is called non-static method.It can be inside the main or method in java.
+	 class Fruit{
+				public static void main(String args[]){
+				static String Fruitname="jackFruit";
+		        static int price=70;
+				System.out.println("Fruitname");
+				System.out.println(price);
+				}
+		}.
+
+
+5. class SortArray {
+   public static void sortArray(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,6,3,5,8,2,4};
+        sortAscending(arr);
+        System.out.println("Sorted Array in a Order:");
+        for (int num : arr) {
+            System.out.print(num);
+        }
+    }
+}
+
+6.Yes we can overlod the static method in java.
+           By using the two different methods with having same name in the given class we can overload the static method in java.
+		   In the given  two method having differnet parameters in the partiular method in the given class in java.
+
+7.class Zomato{
+
+static String foodName[]={null,null,null,null,null,null,null,null,null,null};
+static int index;
+
+public static boolean getFoodName(String food){
+boolean isAdded=false;
+	if(foodName!=null){
+		foodName[index]=food;
+		index++;
+		isAdded=true;
+	}
+	else{
+		System.out.println("Food is not there ,it's a null value");
+	}
+	return  isAdded;
+}
+public static boolean updatestationName(String existingfoodName,String updatedfoodName){ 
+    boolean isUpdated=false;
+	for(int i=0;i<foodName.length;i++){
+		if(foodName[i].equals(existingfoodName)){
+			foodName[i]=updatedfoodName;
+			isUpdated=true;
+		}
+	}
+	return isUpdated;
+}
+
+public static void zomatoMenu(){
+System.out.println("invoking zomatoMenu");
+for(int k=0;k<foodName.length;k++){
+	String reference=foodName[k];
+	System.out.println("acccesing value " + reference  + " at " + k);
+}
+System.out.println("ending with zomatoMenu ");
+
+}
+public static void main(String args[]){
+	Zomato.foodName("Upittu");
+	Zomato.foodName("chapati");
+	Zomato.foodName("Pizza");
+	Zomato.foodName("Bisibele bath");
+	Zomato.foodName("chitrana");
+	Zomato.foodName("karabatha");
+	Zomato.foodName("veg friedrice");
+	Zomato.foodName("mini meals");
+	Zomato.foodName("gobi corn");
+	Zomato.foodName("Noodles");
+	Zomato.foodName("Pulav");
+	Zomato.foodName("gravy");
+	Zomato.foodName("side dishes");
+	Zomato.foodName("Kurma");
+	Zomato.foodName("Dal");
+
+Zomato.zomatoMenu();
+boolean isUpdated=Zomato.updatefoodName("chitrana","Pongal");
+System.out.println("The upadated food is added" + isUpdated);
+Zomato.zomatoMenu();
+}
+}
+
+8.variable is a container in which it store all the the given data with the using datatype.
+     There are 4 types:
+	 1.static 2.instance 3.local 4.parameter
+     1.Static variable: It is declare with static as keyword and it is initializes in the given class not in method is called static variable.
+	  eg:class Customer{
+static String customerName="Ramesh";
+static long phonenumber=7899186879l;
+static String address="RajajiNagar";
+static String email="pra@gmail.com";
+
+
+public static void main(String Patient[]){
+System.out.println("The customerName is" + customerName);
+System.out.println("The customer phonenumber is" + phonenumber);
+System.out.println("The customer address is" + address);
+System.out.println("The customer  email is" + email);
+}
+}
+2.Local variable: This is declare in a method or function in a class ,not using the static as a keyword.
+               eg:class Fridge{
+public static void main(String Patient[]){
+ String brandName="LG";
+ int price=30,000;
+ String weight="12kg";
+ boolean isThere=true;
+System.out.println("The Name of product is" + brandName);
+System.out.println("The weight brand is" + weight);
+System.out.println("The price of product is" + price);
+System.out.println("It is there in online shopping" + isThere);
+}
+}
+
+9. Method Syntax:
+                              public  static void methodname(Parameter){
+							  //////statements;
+							  }
+Public static : It is a accessor and modifier in given code of java.
+void:This is type in the given method in the class which is named as returnType in the methid.
+ methodName:Here we have to give the method name in the block of code.
+ Parameter:It can be initializes one  or more parameter using the datatypes in the given method or function.
+
+                                                                                     APTITUDE
+1.c)Grandson
+2.d)brother
+3.c)sister
+4.b)son
+5.b)son
+6.c)X+A*Y
+7.d)s
+8.b)brother-in-law
+9.a)Father
+10.b) R
+11.d)7kms
+12.b)south
+13.a)south-west
+14.b)south-east.
