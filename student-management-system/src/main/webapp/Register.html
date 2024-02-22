@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student-management-system</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span>
+
+        <br> <br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameError" class="error"></span>
+
+        <br> <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError" class="error"></span>
+
+        <br> <br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+        <span id="contactNumberError" class="error"></span>
+
+        <br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var contactNumber = document.getElementById('contactNumber').value;
+
+            
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerText = 'Invalid email address';
+                return false;
+            } else {
+                document.getElementById('emailError').innerText = '';
+            }
+
+            
+            if (username.length < 3) {
+                document.getElementById('usernameError').innerText = 'Username must be at least 3 characters';
+                return false;
+            } else {
+                document.getElementById('usernameError').innerText = '';
+            }
+
+           
+            if (password.length < 6) {
+                document.getElementById('passwordError').innerText = 'Password must be at least 6 characters';
+                return false;
+            } else {
+                document.getElementById('passwordError').innerText = '';
+            }
+
+  
+            if (contactNumber.length !== 10) {
+                document.getElementById('contactNumberError').innerText = 'Contact number must be 10 digits';
+                return false;
+            } else {
+                document.getElementById('contactNumberError').innerText = '';
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
