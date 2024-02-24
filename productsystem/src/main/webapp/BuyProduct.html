@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ProductSystem</title>
+  
+ <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #fff;
+        }
+
+        form {
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color:  #001;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+        }
+
+        
+    </style>
+</head>
+<body>
+       
+   <form action="submit" method="get">
+        <label for="productName">ProductName:</label>
+          <select type="option" name="inputname">
+           <option value1="Mobile">Mobile</option>
+           <option value2="LapTop">LapTop</option>
+           <option value3="Charger">Charger</option>
+           <option value4="speaker">speaker</option>
+           <option value5="stand">stand</option>
+           <option value6="TV">TV</option>
+           <option value7="chair">chair</option>
+           </select>
+         
+        <label for="quantity">Quantity:</label>
+        <input type="tel" id="quantity" name="inputQuantity" required>
+
+        <label for="price per piece">price per piece:</label>
+        <input type="text" id="priceperpiece" name="inputPrice" required>
+
+       <button type="submit""submit-button">submit</button>
+
+    </form>
+</body>
+ 
+</html>
